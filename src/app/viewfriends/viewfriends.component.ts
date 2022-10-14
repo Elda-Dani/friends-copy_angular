@@ -13,12 +13,13 @@ export class ViewfriendsComponent implements OnInit {
   }
 
 
-
+  status:boolean=false
 
   fetchData=()=>{
     this.myapi.viewFriend().subscribe(
       (data)=>{
         this.friendsData=data
+        this.status=true
       
       }
     )
@@ -27,7 +28,7 @@ export class ViewfriendsComponent implements OnInit {
   friendsData:any=[]
 
 
-  
+
   ngOnInit(): void {
   }
 
